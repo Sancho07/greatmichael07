@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+   <html lang="EN">
+    <head>
+        <title>My First Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+            fieldset, footer {
+              background-color: #eeeeee;
+              font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            
+            legend {
+              background-color: gray;
+              color: white;
+              padding: 5px 10px;
+            }
+
+            input[type=text], input[type=email], input[type=password], input[type=tel], input[type=date], input[type=url], select, textarea {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border-width: 1px;
+            }
+
+            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=date], input[type=url], select, textarea {
+                width: 100%;
+                margin-top: 0;
+            }
+            }
+
+            input[type=submit], input[type=reset], input[type=file]{
+                background-color: #0c90bc; /* Sky Blue */
+                border-radius: 10px;
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+                }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Logo Section -->
+        <p style="text-align: center;">
+            <img src="jeremystore.jpg"  style="max-width:60%;height:auto;">
+        </p>
+
+        <!-- Header Section -->
+        <h1 style="color: rgb(0, 94, 255); text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Register With Us</h1>
+        
+        <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Welcome &#128525; Please Fill Out The Form To Register
+        </p>
+
+
+        <!-- Sign Up Form Section -->
+        <form action="/action_page.php" method="get" autocomplete="on">
+            <fieldset>
+                <legend>Hi! &#128075; <br> Please fill in your details: </legend>
+                <input type="text" id="firstname" name="firstname" placeholder="Firstname" required style="margin-right: 10px;">
+
+                <input type="text" id="lastname" name="lastname" placeholder="Lastname" required><br><br>
+                
+                <input type="email" id="email" name="email" placeholder="Type Your Email" required style="margin-right: 10px;">
+
+                <input type="tel" id="phone" name="phone" placeholder="Type Your Phone Number" required><br><br>
+
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">Male
+                <input type="radio" id="female" name="gender" value="female">Female
+                <br><br>
+
+                <label for="birthday">Date of Birth:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+
+                <label for="state">State of Origin:</label>
+                <select>
+                    <option disabled selected>--Select State--</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="FCT">Federal Capital Territory</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                </select><br><br>
+
+                What would you like to learn?<br>
+                <input type="checkbox" id="python" name="python" value="Python">
+                <label for="python"> Python Programming</label><br>
+                <input type="checkbox" id="web" name="web" value="web">
+                <label for="web"> Web Design</label><br>
+                <input type="checkbox" id="data" name="data" value="data">
+                <label for="data"> Data Analysis</label><br><br>
+
+                <label for="shirt">T-Shirt Size:</label>
+                <input type="radio" id="l" name="shirt" value="l">L
+                <input type="radio" id="xl" name="shirt" value="xl">XL
+                <input type="radio" id="xxl" name="shirt" value="xxl">2XL
+                <input type="radio" id="xxxl" name="shirt" value="xxxl">3XL
+                <br><br>
+
+                <label for="favcolor">Select your prefered color:</label>
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+
+                <label for="myfile">Upload your documents:</label>
+                <input type="file" id="myfile" name="myfile" multiple><br>
+                <em style="font-size: 10px; color: rgb(146, 14, 14);">**Documents needed are: O'Level, Gov't Issued ID &amp; Any other academic qualifications.</em><br><br>
+
+                <input type="url" id="social" name="social" placeholder="Twitter Profile Link"><br><br>
+
+                <input type="text" id="username" name="username" placeholder="Type Your Username" required style="margin-right: 10px;"><br><br>
+
+               <input type="password" id="password" name="password" placeholder="Type Your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+               <input type="checkbox" onclick="myFunction()">Show Password
+               <br><br>
+
+                <textarea name="message" rows="10" cols="30" placeholder="Tell us why we should consider you for this programme"></textarea>
+                <br><br>
+
+                <input type="submit" value="Submit Form">
+                <input type="reset" value="Clear Form"><br><br>
+
+                <a href="index.html">Go Back To Home</a> 
+
+            </fieldset>
+            <br>
+
+            <!-- Footer Section -->
+            <footer style="text-align: center;">
+                Developed with &#128151; by <a href="https://twitter.com/ucheblessed">Uche Blessed</a> &copy; Elanhub.  2023.<br><br>
+            </footer>
+            
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("password");
+                  if (x.type === "password") {
+                    x.type = "text";
+                  } else {
+                    x.type = "password";
+                  }
+                }
+                </script>
+
+            <hr>
+            
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
